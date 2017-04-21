@@ -15,14 +15,14 @@ assetic:
     read_from: %kernel.root_dir%/
     write_to: %kernel.root_dir%/../web
     assets:
-        hvgsystem_css:
+        klanpage_css:
             inputs:
                 - Resources/less/build.less
             filters:
                 - less
                 - cssrewrite
-            output: css/hvgsystem.css
-        hvgsystem_js:
+            output: css/klanpage.css
+        klanpage_js:
             inputs: 
                 - Resources/js/custom.js
-            output: js/hvgsystem.js
+            output: js/klanpage.js
