@@ -18,7 +18,7 @@ class AppKernel extends Kernel
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
-            new Knp\Bundle\TimeBundle\KnpTimeBundle(),
+//            new Knp\Bundle\TimeBundle\KnpTimeBundle(),
             new Braincrafted\Bundle\BootstrapBundle\BraincraftedBootstrapBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Vich\UploaderBundle\VichUploaderBundle(),
