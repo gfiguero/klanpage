@@ -2,6 +2,6 @@ klan_page_testing:
     resource: "@KlanPageBundle/Resources/config/routing/testing.yml"
     prefix:   /testing
 
-klan_page_homepage:
+klan_page_dashboard:
     path:     /
-    defaults: { _controller: KlanPageBundle:Default:index }
+    defaults: { _controller: KlanPageBundle:Dashboard:index }

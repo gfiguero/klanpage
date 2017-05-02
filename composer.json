@@ -80,11 +80,13 @@
             }
         },
         "require-npm": {
-            "less": "*"
+            "less": "*",
+            "ytplayer": "*"
         },
         "require-bower": {
             "bootstrap-toggle": "*",
-            "scrollreveal": "*"
+            "scrollreveal": "*",
+            "slick-carousel": "*"
         },
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

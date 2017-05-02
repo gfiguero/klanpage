@@ -4,10 +4,10 @@ namespace Klan\PageBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class DashboardController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('KlanPageBundle:Default:index.html.twig');
+        return $this->render('KlanPageBundle:Dashboard:index.html.twig');
     }
 }
