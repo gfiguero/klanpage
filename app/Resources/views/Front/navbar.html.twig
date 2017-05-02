@@ -1,33 +1,26 @@
 {% block navbar %}
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="container navbar-fixed-top">
+        <nav class="navbar navbar-default" role="navigation">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-main" aria-expanded="false">
+                    <i class="fa fa-bars"></i>
+                    <span class="sr-only">Navegación</span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#header">Start Bootstrap</a>
+                <a href="#" class="navbar-brand hidden-lg hidden-md">
+                    <img src="img/logo-blanco.png">
+                </a>
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
+            <div class="collapse navbar-collapse" id="nav-main">
+                <ul class="nav navbar-nav">
+                    <li><a id="scroll-home" href="javascript:void(0)">Home</a></li>
+                    <li><a id="scroll-acerca-de" href="javascript:void(0)">Acerca de</a></li>
+                    <li><a id="scroll-recientes" href="javascript:void(0)">Recientes</a></li>
+                    <li class="hidden-sm hidden-xs"><a href="#" class="navbar-brand"><img src="img/logo-blanco.png"></a></li>
+                    <li><a id="scroll-en-desarrollo" href="javascript:void(0)">En desarrollo</a></li>
+                    <li><a id="scroll-portafolio" href="javascript:void(0)">Portafolio</a></li>
+                    <li><a id="scroll-contacto" href="javascript:void(0)">Contacto</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+        </nav>
+    </div>
 {% endblock %}
