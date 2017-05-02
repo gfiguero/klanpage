@@ -1576,12 +1576,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/bootstrap-fileinput.git",
-                "reference": "72065d989d7684a9af7370c09b8889bf073557b7"
+                "reference": "6c4be4faf6d471ae23caec142c74f8cf7b2a191c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/72065d989d7684a9af7370c09b8889bf073557b7",
-                "reference": "72065d989d7684a9af7370c09b8889bf073557b7",
+                "url": "https://api.github.com/repos/kartik-v/bootstrap-fileinput/zipball/6c4be4faf6d471ae23caec142c74f8cf7b2a191c",
+                "reference": "6c4be4faf6d471ae23caec142c74f8cf7b2a191c",
                 "shasum": ""
             },
             "type": "library",
@@ -1621,7 +1621,7 @@
                 "progress",
                 "upload"
             ],
-            "time": "2017-04-30 20:33:01"
+            "time": "2017-05-02 10:32:01"
         },
         {
             "name": "knplabs/knp-components",
