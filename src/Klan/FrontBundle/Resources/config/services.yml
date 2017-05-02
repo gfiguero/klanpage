@@ -1,0 +1,4 @@
+services:
+#    klan_front.example:
+#        class: Klan\FrontBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

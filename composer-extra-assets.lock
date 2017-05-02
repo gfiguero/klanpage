@@ -1,6 +1,7 @@
 {
     "bower-dependencies": {
-        "bootstrap-toggle": "https://github.com/minhur/bootstrap-toggle.git#2.2.2"
+        "bootstrap-toggle": "https://github.com/minhur/bootstrap-toggle.git#2.2.2",
+        "scrollreveal": "https://github.com/jlmakes/scrollreveal.js.git#3.3.5"
     },
     "npm-dependencies": {
         "self": {

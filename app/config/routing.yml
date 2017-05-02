@@ -1,3 +1,7 @@
+klan_front:
+    resource: "@KlanFrontBundle/Resources/config/routing.yml"
+    prefix:   /
+
 klan_page:
     resource: "@KlanPageBundle/Resources/config/routing.yml"
-    prefix:   /
+    prefix:   /page

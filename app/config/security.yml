@@ -18,8 +18,7 @@ security:
         in_memory:
             memory:
                 users:
-                    root: { password: Au0ZedG4Ewn5aOK, roles: 'ROLE_ADMIN' }
-                    admin: { password: admin, roles: 'ROLE_ADMIN' }
+                    root: { password: %root_password%, roles: 'ROLE_ADMIN' }
 #        klan_userbundle:
 #            id: fos_user.user_provider.username_email
 

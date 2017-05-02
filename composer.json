@@ -83,7 +83,8 @@
             "less": "*"
         },
         "require-bower": {
-            "bootstrap-toggle": "*"
+            "bootstrap-toggle": "*",
+            "scrollreveal": "*"
         },
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",

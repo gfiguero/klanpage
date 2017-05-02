@@ -5,6 +5,7 @@ setfacl -R -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX web/uploads web/media
 setfacl -dR -m u:"$HTTPDUSER":rwX -m u:`whoami`:rwX web/uploads web/media
 
 php app/console generate:bundle --namespace Klan/PageBundle --dir src --bundle-name KlanPageBundle --format yml --shared --no-interaction
+php app/console generate:bundle --namespace Klan/FrontBundle --dir src --bundle-name KlanFrontBundle --format yml --shared --no-interaction
 
 php app/console doctrine:generate:entities KlanPageBundle:Testing --path=src
 php app/console generate:doctrine:crud --entity=KlanPageBundle:Testing --format=yml --with-write --overwrite --no-interaction --route-prefix=testing

@@ -1,38 +1,48 @@
-jQuery(document).ready(function($) {
-    $('#side-menu').metisMenu();
-});
+(function($) {
+    "use strict"; // Start of use strict
 
-var optionsFileinput = {
-    showPreview: false,
-    showRemove: false,
-    showUpload: false,
-    showCancel: false,
-    showClose: false,
-    showZoom: false,
-    browseClass: 'btn btn-primary btn-block',
-    browseLabel: 'Seleccionar Archivo'
-}
-$(".fileinput").find('input').fileinput(optionsFileinput);
-
-$(function() {
-    $(window).bind("load resize", function() {
-        width = (this.window.innerWidth > 0) ? this.window.innerWidth : this.screen.width;
-//        if (width < 992) {
-        if (width < 768) {
-            $('div.sidebar-collapse').addClass('collapse');
-            $('div.navbar-collapse').addClass('collapse');
-        } else {
-            $('div.sidebar-collapse').removeClass('collapse');
-            $('div.navbar-collapse').removeClass('collapse');
-        }
+    // jQuery for page scrolling feature - requires jQuery Easing plugin
+    $(document).on('click', 'a.page-scroll', function(event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+        }, 1250, 'easeInOutExpo');
+        event.preventDefault();
     });
 
-    var url = window.location;
-    var element = $('ul.nav a').filter(function() {
-        return this.href == url || url.href.indexOf(this.href) == 0;
-    }).addClass('active').parent().parent().addClass('in').parent();
-    if (element.is('li')) {
-        element.addClass('active');
-    }
-});
+    // Highlight the top nav as scrolling occurs
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 51
+    });
 
+    // Closes the Responsive Menu on Menu Item Click
+    $('.navbar-collapse ul li a').click(function() {
+        $('.navbar-toggle:visible').click();
+    });
+
+    // Offset for Main Navigation
+    $('#mainNav').affix({
+        offset: {
+            top: 100
+        }
+    })
+
+    // Initialize and Configure Scroll Reveal Animation
+    window.sr = ScrollReveal();
+    sr.reveal('.sr-icons', {
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
+    }, 200);
+    sr.reveal('.sr-button', {
+        duration: 1000,
+        delay: 200
+    });
+    sr.reveal('.sr-contact', {
+        duration: 600,
+        scale: 0.3,
+        distance: '0px'
+    }, 300);
+
+})(jQuery); // End of use strict
