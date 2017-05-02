@@ -5,6 +5,7 @@
 {% use ':Front:service.html.twig' %}
 {% use ':Front:portfolio.html.twig' %}
 {% use ':Front:contact.html.twig' %}
+{% use ':Front:customer.html.twig' %}
 
 {% set translation_domain = 'KlanPageBundle' %}
 {% trans_default_domain translation_domain %}
@@ -19,5 +20,6 @@
     {% block service %}{{ parent() }}{% endblock %}
     {% block portfolio %}{{ parent() }}{% endblock %}
     {% block contact %}{{ parent() }}{% endblock %}
+    {% block customer %}{{ parent() }}{% endblock %}
 
 {% endblock %}
