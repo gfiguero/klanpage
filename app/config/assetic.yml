@@ -26,3 +26,14 @@ assetic:
             inputs: 
                 - Resources/js/custom.js
             output: js/klanpage.js
+        backend_css:
+            inputs:
+                - Resources/less/backend/build.less
+            filters:
+                - less
+                - cssrewrite
+            output: css/backend.css
+        backend_js:
+            inputs: 
+                - Resources/js/backend/custom.js
+            output: js/backend.js
