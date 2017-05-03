@@ -7094,7 +7094,7 @@ header.site-header {
   background-color: transparent;
 }
 .navbar-default ul.navbar-nav {
-  padding-left: 12.8px;
+  padding-left: 20px;
 }
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .navbar-default ul.navbar-nav {
@@ -7687,9 +7687,10 @@ header.site-header {
   padding: 15px 25px 15px 0;
   background-color: rgba(122, 95, 147, 0.5);
   border-radius: 50px;
-  font-size: 25px;
+  font-size: 18px;
   line-height: 25px;
   margin-bottom: 1em;
+  height: 80px;
 }
 @media screen and (max-width: 992px) {
   #contacto .dato {
