@@ -12,11 +12,18 @@
     <meta name="author" content="HVG">
     <meta name="language" content="es">
     <title>{% block title %}{% endblock %}</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Khand:400,100,300,700|Fira+Sans' rel='stylesheet' type='text/css'>
+    
     <link href="{{ asset('css/font-awesome/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/jqueryui/jquery-ui.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/metismenu/metisMenu.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slick/slick.css') }}" rel="stylesheet">
     <link href="{{ asset('css/klanpage.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('js/ytplayer2/css/jquery.mb.YTPlayer.min.css') }}">
+    <link href="{{ asset('css/animate.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.tosrus.drag.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/jquery.tosrus.all.css') }}" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -36,6 +43,13 @@
     <script src="{{ asset('js/slick/slick.js') }}"></script>
     <script src="{{ asset('js/ytplayer/ytplayer.js') }}"></script>
     <script src="{{ asset('js/klanpage.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/ytplayer2/jquery.mb.YTPlayer.min.js') }}"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+     <script type="text/javascript"  src="{{ asset('js/hammer.min.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('js/jquery.tosrus.min.all.js') }}"></script>
     {% block javascript %}{% endblock %}
 </body>
 </html>

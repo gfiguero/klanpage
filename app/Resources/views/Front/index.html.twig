@@ -4,8 +4,11 @@
 {% use ':Front:about.html.twig' %}
 {% use ':Front:service.html.twig' %}
 {% use ':Front:portfolio.html.twig' %}
+{% use ':Front:desarrollo.html.twig' %}
+{% use ':Front:portfoliodos.html.twig' %}
 {% use ':Front:contact.html.twig' %}
 {% use ':Front:customer.html.twig' %}
+{% use ':Front:footer.html.twig' %}
 
 {% set translation_domain = 'KlanPageBundle' %}
 {% trans_default_domain translation_domain %}
@@ -19,7 +22,151 @@
     {% block about %}{{ parent() }}{% endblock %}
     {% block service %}{{ parent() }}{% endblock %}
     {% block portfolio %}{{ parent() }}{% endblock %}
-    {% block contact %}{{ parent() }}{% endblock %}
+    {% block desarrollo %}{{ parent() }}{% endblock %} 
+    {% block portfoliodos %}{{ parent() }}{% endblock %}  
+    {% block contact %}{{ parent() }}{% endblock %}    
     {% block customer %}{{ parent() }}{% endblock %}
+    {% block footer %}{{ parent() }}{% endblock %}
+      
+{% endblock %}
 
+{% block javascript %}
+    <script>
+        jQuery(function($){
+            $(".video-bg").YTPlayer().YTPApplyFilters({});
+        });
+
+        /*** Mansory***/
+        var Imgs = [
+        ];
+
+        $(document).ready(function(){
+            $grid = $('#grid-content');
+    
+            $.fn.revealItems = function($items){
+      
+                var iso = this.data('isotope');
+                var itemSelector = iso.options.itemSelector;
+                $items.hide();
+                $(this).append($items);
+                $items.imagesLoaded().progress(function(imgLoad, image){
+                    var $item = $(image.img).parents(itemSelector);
+                    $item.show();
+                    iso.appended($item);
+                });
+    
+                return this;
+            }
+            $grid.isotope({
+                containerStyle: null,
+                masonry:{
+                    columnWidth: 300,
+                    gutter: 15
+                },
+                itemSelector: '.grid-item',
+                filter : '*',
+                transitionDuration: '0.4s'
+            });
+
+    
+            $grid.imagesLoaded().progress(function(){
+                $grid.isotope();
+            })
+    
+            function GenerateItems(){
+                var items = '';
+                return $(items);
+            }
+
+            // SimpleInfiniteScroll
+            function Infinite(e){
+                if((e.type == 'scroll') || e.type == 'click'){
+                    var doc = document.documentElement;
+                    var top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+                    var bottom = top + $(window).height();
+                    var docBottom = $(document).height();
+        
+                    if(bottom + 50 >= docBottom){
+                    $grid.revealItems(GenerateItems());
+                    }
+                }
+            }
+    
+            $grid.revealItems(GenerateItems());
+    
+            $(document).on('click','.filter-item',function(){
+                $('.filter-item.active').removeClass('active');
+                $(this).addClass('active');
+                var f = $(this).data('f');
+                console.log(f);
+                $grid.find('.grid-item').removeClass('wow').removeClass('fadeInUp');
+                $grid.isotope({filter: f});
+      
+            })
+    
+    
+            $(window).resize(function(){
+                var margin=40;
+                var padding=15;
+                var columns=0;
+                var cWidth=300;
+                var windowWidth = $(window).width();
+
+                var overflow = false;
+                while(!overflow){
+                    columns++;
+                    var WidthTheory = ((cWidth*columns)+((columns+1)*padding)+margin);
+                    if(WidthTheory > windowWidth)
+                        overflow = true;      
+                }   
+                if(columns > 1)
+                    columns--;
+      
+                    var GridWidth = ((cWidth*columns)+((columns+1)*padding)+margin);
+      
+            if( GridWidth != $('#grid').width()){
+                $('#grid').width(GridWidth);
+            }
+        });
+        $(window).scroll(Infinite);
+        new WOW().init();
+
+        })
+
+        // Tosrus
+        $(function(){
+            $('#grid .foto').tosrus({
+                pagination : {
+                    add        : true,
+                    type       : "thumbnails"
+                },
+      
+                caption    : {
+                add        : true
+                },
+                drag: true,
+            });
+
+            $('#recientes .foto').tosrus({
+                pagination : {
+                add        : true,
+                type       : "thumbnails"
+                },
+      
+                caption    : {
+                add        : true
+                },
+                drag: true,
+            });
+        });
+
+        //Slick
+        $('.banner-clientes').slick({
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrows: false,
+            autoplaySpeed: 2000,
+        });
+    </script>
 {% endblock %}
